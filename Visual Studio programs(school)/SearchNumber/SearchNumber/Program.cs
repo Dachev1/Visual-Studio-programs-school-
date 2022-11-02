@@ -1,0 +1,20 @@
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter array length: ");
+        int length = int.Parse(Console.ReadLine());
+        int[] arr = new int[length];
+        for (int i = 0; i < length; i++)
+        {
+            Console.Write("Enter {0} element: ", i);
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+        Console.Write("Enter Searched number: ");
+        int number = int.Parse(Console.ReadLine());
+        int index = Array.BinarySearch(arr, number);
+        if (index >= 0) Console.Write("Number is on {0} index", index);
+        else Console.Write("Number wasn't found");
+
+    }
+}
